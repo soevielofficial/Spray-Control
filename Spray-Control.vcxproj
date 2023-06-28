@@ -140,11 +140,16 @@
     <ClCompile Include="Spray-Control\source\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Spray-Control\resource\resource.h" />
     <ClInclude Include="Spray-Control\header\memory.h" />
     <ClInclude Include="Spray-Control\header\vector.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Fiona.ico" />
     <Image Include="Spray-Control\resource\Fiona.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Spray-Control\resource\resource.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
