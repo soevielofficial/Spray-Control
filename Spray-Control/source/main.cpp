@@ -28,6 +28,8 @@ struct Vector2
 
 int main()
 {
+	std::cout << "Made by @soevielofficial\n\n\n";
+
 	const auto memory = Memory{ "csgo.exe" };
 
 	const auto client = memory.GetModuleAddress("client.dll");
