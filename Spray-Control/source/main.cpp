@@ -1,3 +1,4 @@
+#include <iostream>
 #include <thread>
 
 #include "..\header\memory.h"
@@ -33,6 +34,8 @@ int main()
 	const auto engine = memory.GetModuleAddress("engine.dll");
 
 	auto oldPunch = Vector2{ };
+
+	std::cout << "Successfully wrote value to memory." << std::endl;
 
 	while (true)
 	{
