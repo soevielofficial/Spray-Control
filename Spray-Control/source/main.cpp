@@ -26,9 +26,26 @@ struct Vector2
 	float x = { }, y = { };
 };
 
+void SetConsoleColor(WORD color)
+{
+	HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(consoleHandle, color);
+}
+
+void LogDebug(const std::string& message)
+{
+	std::cout << "\033[32m[Info]\033[0m " << message << std::endl;
+	SetConsoleColor(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE); // Reset color to default
+}
+
+void SetConsoleTitle(const std::string& title)
+{
+	SetConsoleTitleA(title.c_str());
+}
+
 int main()
 {
-	std::cout << "Made by @soevielofficial\n\n\n";
+	SetConsoleTitle("SprayControl by @soevielofficial");
 
 	const auto memory = Memory{ "csgo.exe" };
 
@@ -37,7 +54,7 @@ int main()
 
 	auto oldPunch = Vector2{ };
 
-	std::cout << "Successfully wrote value to memory." << std::endl;
+	LogDebug("Successfully wrote value to memory.");
 
 	while (true)
 	{
@@ -74,6 +91,7 @@ int main()
 
 			oldPunch.x = aimPunch.x * 2.f;
 			oldPunch.y = aimPunch.y * 2.f;
+
 		}
 		else
 		{
