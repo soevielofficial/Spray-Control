@@ -103,7 +103,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -145,7 +145,6 @@
     <ClInclude Include="Spray-Control\header\vector.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Fiona.ico" />
     <Image Include="Spray-Control\resource\Fiona.ico" />
   </ItemGroup>
   <ItemGroup>

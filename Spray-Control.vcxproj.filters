@@ -34,9 +34,6 @@
     <Image Include="Spray-Control\resource\Fiona.ico">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Fiona.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Spray-Control\resource\resource.rc">
