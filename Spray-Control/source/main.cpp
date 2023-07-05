@@ -1,3 +1,4 @@
+#include <Windows.h>
 #include <iostream>
 #include <thread>
 
@@ -26,16 +27,22 @@ struct Vector2
 	float x = { }, y = { };
 };
 
-void SetConsoleColor(WORD color)
-{
-	HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(consoleHandle, color);
-}
-
 void LogDebug(const std::string& message)
 {
-	std::cout << "\033[32m[Info]\033[0m " << message << std::endl;
-	SetConsoleColor(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE); // Reset color to default
+	HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	// Set color to default
+	SetConsoleTextAttribute(consoleHandle, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+
+	// Print "[Info]" in green color
+	SetConsoleTextAttribute(consoleHandle, FOREGROUND_GREEN);
+	std::cout << "[Info] ";
+
+	// Reset color to default
+	SetConsoleTextAttribute(consoleHandle, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+
+	// Print the message
+	std::cout << message << std::endl;
 }
 
 void SetConsoleTitle(const std::string& title)
