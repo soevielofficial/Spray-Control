@@ -140,7 +140,7 @@
     <ClCompile Include="Spray-Control\source\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Spray-Control\resource\resource.h" />
+    <ClInclude Include="Spray-Control\header\resource.h" />
     <ClInclude Include="Spray-Control\header\memory.h" />
     <ClInclude Include="Spray-Control\header\vector.h" />
   </ItemGroup>
