@@ -26,9 +26,6 @@
     <ClInclude Include="Spray-Control\header\vector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Spray-Control\header\resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Spray-Control\resource\Fiona.ico">
@@ -36,11 +33,7 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Spray-Control\resource\resource.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
     <None Include=".gitignore" />
+    <None Include="README.md" />
   </ItemGroup>
 </Project>

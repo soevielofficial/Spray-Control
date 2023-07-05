@@ -6,6 +6,7 @@
 
 namespace offset
 {
+	// client.dll
 	constexpr ::std::ptrdiff_t dwLocalPlayer = 0xDEA98C;
 	constexpr ::std::ptrdiff_t dwClientState = 0x59F19C;
 	constexpr ::std::ptrdiff_t dwClientState_GetLocalPlayer = 0x180;
@@ -31,17 +32,17 @@ void LogDebug(const std::string& message)
 {
 	HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
 
-	// Set color to default
+	// set color to default
 	SetConsoleTextAttribute(consoleHandle, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 
-	// Print "[Info]" in green color
+	// print "[Info]" in green color
 	SetConsoleTextAttribute(consoleHandle, FOREGROUND_GREEN);
 	std::cout << "[Info] ";
 
-	// Reset color to default
+	// reset color to default
 	SetConsoleTextAttribute(consoleHandle, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 
-	// Print the message
+	// print the message
 	std::cout << message << std::endl;
 }
 
